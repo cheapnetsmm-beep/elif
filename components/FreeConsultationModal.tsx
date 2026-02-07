@@ -260,6 +260,7 @@ export default function FreeConsultationModal({ isOpen, onClose }: FreeConsultat
         <Toast
           message={toast.message}
           type={toast.type}
+          isVisible={true}
           onClose={() => setToast(null)}
         />
       )}
