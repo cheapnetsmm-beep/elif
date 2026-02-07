@@ -18,10 +18,6 @@ const nextConfig = {
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
   
-  // Experimental features for performance
-  experimental: {
-    optimizeCss: true,
-  },
   
   // Compiler optimizations
   compiler: {
