@@ -3,49 +3,19 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="pt-20 min-h-screen bg-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            Diyetisyen & Psikolog
-          </h1>
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-600 mb-12">
-            Elif Naz Öksüz
-          </h2>
-          
-          {/* Professional Photo with Elegant Frame */}
-          <div className="flex justify-center mb-12">
-            <div className="relative group">
-              {/* Soft Decorative Frame Elements */}
-              <div className="absolute -inset-3 bg-gradient-to-br from-primary-50/20 via-accent-pink/10 to-primary-100/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-              <div className="absolute -inset-1 bg-white/40 rounded-2xl"></div>
-              
-              {/* Image Container - Soft and Harmonious */}
-              <div className="relative rounded-2xl overflow-hidden shadow-soft border-2 border-gray-100/80 group-hover:shadow-elegant transition-all duration-500 group-hover:scale-[1.01]">
-                {/* Very Subtle Overlay for Harmony */}
-                <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent z-10 pointer-events-none"></div>
-                <Image
-                  src="/images/elif1.jpeg"
-                  alt="Elif Naz Öksüz - Diyetisyen & Psikolog"
-                  width={400}
-                  height={500}
-                  className="object-cover w-[300px] h-[400px] md:w-[400px] md:h-[500px] relative z-0"
-                  priority
-                  style={{ filter: 'brightness(0.98) contrast(0.98) saturate(1.02)' }}
-                />
-              </div>
-              
-              {/* Minimal Corner Accents */}
-              <div className="absolute -top-1 -left-1 w-6 h-6 border-t-2 border-l-2 border-primary-300/50 rounded-tl-lg opacity-50"></div>
-              <div className="absolute -top-1 -right-1 w-6 h-6 border-t-2 border-r-2 border-primary-300/50 rounded-tr-lg opacity-50"></div>
-              <div className="absolute -bottom-1 -left-1 w-6 h-6 border-b-2 border-l-2 border-primary-300/50 rounded-bl-lg opacity-50"></div>
-              <div className="absolute -bottom-1 -right-1 w-6 h-6 border-b-2 border-r-2 border-primary-300/50 rounded-br-lg opacity-50"></div>
-            </div>
-          </div>
-        </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        {/* Başlıklar — üstte tam genişlik */}
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+          Diyetisyen & Psikolog
+        </h1>
+        <h2 className="text-3xl md:text-4xl font-bold text-primary-600 mb-12">
+          Elif Naz Öksüz
+        </h2>
 
-        <div className="prose prose-lg max-w-none">
-          <div className="mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Kimdir?</h3>
+        {/* Kimdir? + 3 paragraf ile fotoğraf yan yana, üst ve alt hizalı */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch mb-12">
+          <div className="order-2 lg:order-1 flex flex-col prose prose-lg max-w-none">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4 !mt-0">Kimdir?</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
               2021 yılında Acıbadem Üniversitesi Beslenme ve Diyetetik bölümünden derece ile mezun oldum. Lisans eğitimim sırasında psikoloji alanına duyduğum ilgi doğrultusunda çift anadal programı ile psikoloji eğitimine başladım ve 2023 yılında Acıbadem Üniversitesi Psikoloji bölümünden mezun oldum.
             </p>
@@ -55,17 +25,36 @@ export default function AboutPage() {
             <p className="text-gray-700 leading-relaxed mb-4">
               DATEM'den aldığım Bilişsel Davranışçı Terapi (BDT) eğitimi doğrultusunda çalışmalarımı bu ekol çerçevesinde yürütüyorum.
             </p>
-          </div>
-
-          <div className="bg-primary-50 p-8 rounded-2xl border-l-4 border-primary-600">
-            <p className="text-xl text-gray-800 italic leading-relaxed">
-              "Bireyin iyilik halinin, bedensel ve psikolojik boyutların birbirinden ayrılamayacağı bütünsel bir dengeye dayandığına inanıyorum. Diyetisyen ve psikolog kimliğimle; beslenme danışmanlığı ile psikolojik desteği, ihtiyaca göre bağımsız disiplinler olarak veya bu iki alanın kesişim noktası olan psikonütrisyon temelinde entegre bir süreçle sunuyorum. Türkiye'de henüz yeni gelişmekte olan ve bütüncül bir yaklaşım içeren psikonütrisyon alanında, bu bakış açısını benimseyen bireylere, kişisel hedefleri ve yaşam dinamikleri doğrultusunda profesyonel bir rehberlik sunmayı amaçlıyorum."
+            <p className="text-sm text-gray-500 mt-auto">
+              Sorularınız ve randevu için iletişim sayfamdan bana ulaşabilirsiniz.
             </p>
           </div>
+
+          <div className="order-1 lg:order-2 flex justify-center items-center lg:justify-end lg:items-start min-h-[280px] lg:min-h-0">
+            <div className="relative group shrink-0">
+              <div className="absolute -inset-2 bg-gradient-to-br from-primary-50/30 to-primary-100/20 rounded-3xl blur-lg"></div>
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <Image
+                  src="/images/elifnazhak.jpeg"
+                  alt="Elif Naz Öksüz - Diyetisyen & Psikolog"
+                  width={450}
+                  height={560}
+                  className="object-cover w-full max-w-[320px] md:max-w-[380px] h-auto aspect-[3/4]"
+                  priority
+                  sizes="(max-width: 1024px) 320px, 380px"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Alıntı kutusu — altta tam genişlik, yatay */}
+        <div className="bg-primary-50 p-6 rounded-2xl border-l-4 border-primary-600">
+          <p className="text-lg text-gray-800 italic leading-relaxed max-w-none">
+            "Bireyin iyilik halinin, bedensel ve psikolojik boyutların birbirinden ayrılamayacağı bütünsel bir dengeye dayandığına inanıyorum. Diyetisyen ve psikolog kimliğimle; beslenme danışmanlığı ile psikolojik desteği, ihtiyaca göre bağımsız disiplinler olarak veya bu iki alanın kesişim noktası olan psikonütrisyon temelinde entegre bir süreçle sunuyorum. Türkiye'de henüz yeni gelişmekte olan ve bütüncül bir yaklaşım içeren psikonütrisyon alanında, bu bakış açısını benimseyen bireylere, kişisel hedefleri ve yaşam dinamikleri doğrultusunda profesyonel bir rehberlik sunmayı amaçlıyorum."
+          </p>
         </div>
       </div>
     </div>
   );
 }
-
-

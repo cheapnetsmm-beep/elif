@@ -1,12 +1,16 @@
 import Link from "next/link";
-import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import Image from "next/image";
+import type { Metadata } from "next";
+import { ArrowLeft, Calendar, Tag, Clock } from "lucide-react";
 import { notFound } from "next/navigation";
+import BlogShareButtons from "@/components/BlogShareButtons";
 
 const blogPosts: Record<string, any> = {
   "bagirsak-beyin-ekseni": {
     title: "Bağırsak-Beyin Ekseni: Ruh Hali ve Sağlık Üzerindeki Etkileri",
     date: "7 Ocak 2026",
     category: "Beslenme & Psikoloji",
+    readingMinutes: 6,
     content: (
       <div className="prose prose-lg max-w-none">
         <section className="mb-8">
@@ -137,6 +141,7 @@ const blogPosts: Record<string, any> = {
     title: "Demir Eksikliği: Belirtileri, Nedenleri ve Eksikliği Nasıl Giderilir?",
     date: "7 Ocak 2026",
     category: "Beslenme",
+    readingMinutes: 5,
     content: (
       <div className="prose prose-lg max-w-none">
         <section className="mb-8">
@@ -328,6 +333,7 @@ const blogPosts: Record<string, any> = {
     title: "İrade Değil Psikoloji: Yeme Davranışlarımızı Gerçekte Ne Yönetiyor?",
     date: "7 Ocak 2026",
     category: "Psikonütrisyon",
+    readingMinutes: 5,
     content: (
       <div className="prose prose-lg max-w-none">
         <section className="mb-8">
@@ -487,6 +493,7 @@ const blogPosts: Record<string, any> = {
     title: "Zihinsel Yorgunluk Nedir? Belirtileri, Nedenleri ve Baş Etme Yolları",
     date: "30 Ocak 2026",
     category: "Psikoloji",
+    readingMinutes: 6,
     content: (
       <div className="prose prose-lg max-w-none">
         <section className="mb-8">
@@ -496,6 +503,15 @@ const blogPosts: Record<string, any> = {
           <p className="text-gray-700 leading-relaxed mb-4 italic">
             Birçok kişi bu durumu "hiçbir şey yapmadım ama çok yoruldum" ya da "tatil yaptım ama zihnim hâlâ dolu" sözleriyle ifade eder.
           </p>
+          <div className="my-8 rounded-xl overflow-hidden shadow-md">
+            <Image
+              src="/images/zihin.jpeg"
+              alt="Zihinsel yorgunluk"
+              width={800}
+              height={450}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </section>
 
         <section className="mb-8">
@@ -594,6 +610,7 @@ const blogPosts: Record<string, any> = {
     title: "Ne Zaman Psikoloğa Gitmek Gerekir?",
     date: "30 Ocak 2026",
     category: "Psikoloji",
+    readingMinutes: 4,
     content: (
       <div className="prose prose-lg max-w-none">
         <section className="mb-8">
@@ -709,6 +726,7 @@ const blogPosts: Record<string, any> = {
     title: "Sınır Koymak ve Hayır Diyebilmek: Kendi Bahçeni Korumak",
     date: "30 Ocak 2026",
     category: "Psikoloji",
+    readingMinutes: 6,
     content: (
       <div className="prose prose-lg max-w-none">
         <section className="mb-8">
@@ -721,6 +739,15 @@ const blogPosts: Record<string, any> = {
           <p className="text-gray-700 leading-relaxed mb-4">
             Bu bahçenin sınırları olmazsa, herkes içeri girip çiçeklere dokunabilir, toprağı eşeleyebilir ya da farkında olmadan zarar verebilir. Psikolojik sınırlar da tam olarak böyledir.
           </p>
+          <div className="my-8 rounded-xl overflow-hidden shadow-md">
+            <Image
+              src="/images/sinirkoymak.jpeg"
+              alt="Sınır koymak"
+              width={800}
+              height={450}
+              className="w-full h-auto object-cover"
+            />
+          </div>
         </section>
 
         <section className="mb-8">
@@ -808,7 +835,309 @@ const blogPosts: Record<string, any> = {
       </div>
     ),
   },
+  "duygusal-yeme": {
+    title: "Duygusal Yeme ile Baş Etme Yöntemleri",
+    date: "15 Mart 2025",
+    category: "Psikonütrisyon",
+    readingMinutes: 5,
+    content: (
+      <div className="prose prose-lg max-w-none">
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Duygusal Yeme Nedir?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Duygusal yeme; fizyolojik açlık olmamasına rağmen, stres, kaygı, öfke, yalnızlık, sıkıntı veya mutsuzluk gibi duyguların etkisiyle yemek yeme davranışıdır.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Bu durumda amaç bedeni beslemekten çok, duyguyu bastırmak ya da rahatlama sağlamak olur.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Duygusal Açlık ile Fiziksel Açlık Arasındaki Farklar</h2>
+          <div className="overflow-x-auto rounded-xl border border-gray-200 mb-4">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-primary-50 border-b border-gray-200">
+                  <th className="px-4 py-3 font-semibold text-gray-900">Fiziksel Açlık</th>
+                  <th className="px-4 py-3 font-semibold text-gray-900">Duygusal Açlık</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr><td className="px-4 py-3">Yavaş gelişir.</td><td className="px-4 py-3">Aniden ortaya çıkar.</td></tr>
+                <tr><td className="px-4 py-3">Mide kazınması hissi vardır.</td><td className="px-4 py-3">Belirli bir yiyecek isteği olur.</td></tr>
+                <tr><td className="px-4 py-3">Yemekle doyum sağlanır.</td><td className="px-4 py-3">Doygunluk hissi gecikir.</td></tr>
+                <tr><td className="px-4 py-3">Suçluluk yaratmaz.</td><td className="px-4 py-3">Pişmanlık ve suçluluk sık görülür.</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-gray-700 leading-relaxed">
+            Bu farkı ayırt edebilmek, duygusal yeme ile baş etmenin ilk ve en kritik adımıdır.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Duygusal Yeme Neden Ortaya Çıkar?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Duygusal yeme davranışının altında genellikle şu faktörler bulunur:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+            <li>Stres ve kortizol artışı</li>
+            <li>Bastırılmış duygular</li>
+            <li>Yetersiz uyku</li>
+            <li>Düzensiz öğün saatleri</li>
+            <li>Çocukluktan gelen &quot;ödül olarak yemek&quot; alışkanlığı</li>
+            <li>Mükemmeliyetçilik ve katı diyetler</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mt-4">
+            Özellikle çok kısıtlayıcı diyetler, duygusal yeme ataklarını tetikleyebilir.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Duygusal Yeme ile Baş Etme Yöntemleri</h2>
+
+          <div className="space-y-6 mb-6">
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">1. Açlık–Duygu Kontrolü Yapmayı Öğrenin</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 ml-2">
+                <li>Yemek yemeden önce kendinize şu soruyu sorun: &quot;Şu an gerçekten aç mıyım, yoksa bir duygu mu yaşıyorum?&quot;</li>
+                <li>Gerekirse 5–10 dakika bekleyin. Fiziksel açlıkta istek devam eder, duygusal açlıkta genellikle azalır.</li>
+              </ul>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Farkındalıkla Beslenme (Mindful Eating) Uygulayın</h3>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 ml-2 mb-2">
+                <li>Yavaş yiyin.</li>
+                <li>Ekransız ortamda yemek yiyin.</li>
+                <li>Tat, koku ve dokuya odaklanın.</li>
+              </ul>
+              <p className="text-gray-600">Bu yaklaşım, otomatik yeme davranışını azaltır ve tokluk sinyallerini güçlendirir.</p>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Duygularınızı Yemekle Değil, Alternatiflerle Düzenleyin</h3>
+              <p className="text-gray-700 mb-2">Yemek yerine şu alternatifleri deneyebilirsiniz:</p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 ml-2 mb-2">
+                <li>10 dakikalık yürüyüş</li>
+                <li>Nefes egzersizi</li>
+                <li>Günlük tutmak</li>
+                <li>Ilık duş</li>
+                <li>Sevdiğiniz biriyle kısa bir sohbet</li>
+              </ul>
+              <p className="text-gray-600">Amaç, duyguyu bastırmak değil regüle etmektir.</p>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">4. Öğün Atlamayın ve Kan Şekerini Dengeleyin</h3>
+              <p className="text-gray-700 mb-2">Uzun açlıklar: kan şekerinde dalgalanmalara ve akşam saatlerinde kontrolsüz yeme ataklarına neden olabilir.</p>
+              <p className="text-gray-600">Düzenli ve dengeli öğünler, duygusal yeme riskini belirgin şekilde azaltır.</p>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">5. Kendinize Yasaklar Koymayın</h3>
+              <p className="text-gray-700">&quot;Bunu asla yemem&quot; yaklaşımı, yeme isteğini daha da artırır. Esnek ve sürdürülebilir beslenme modeli, suçluluk döngüsünü kırar.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8 bg-primary-50 p-8 rounded-2xl border border-primary-200">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Duygusal Yeme ile Barışmak Mümkün</h2>
+          <p className="text-gray-700 leading-relaxed mb-2">
+            Duygusal yeme bir &quot;irade problemi&quot; değil, duygu düzenleme becerisiyle ilişkilidir.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-2">
+            Amaç tamamen ortadan kaldırmak değil, fark etmek ve yönetebilmektir.
+          </p>
+          <p className="text-gray-700 leading-relaxed font-semibold">
+            Kendinize şefkatle yaklaşmak, bu sürecin en güçlü adımıdır.
+          </p>
+        </section>
+      </div>
+    ),
+  },
+  "surdurulebilir-beslenme": {
+    title: "Sürdürülebilir Beslenme Alışkanlıkları",
+    date: "10 Mart 2025",
+    category: "Beslenme",
+    readingMinutes: 5,
+    content: (
+      <div className="prose prose-lg max-w-none">
+        <section className="mb-8">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Sürdürülebilir beslenme, kısa süreli diyet kurallarından çok daha fazlasıdır. Amaç yalnızca kilo vermek değil; bedeni, zihni ve günlük yaşamı destekleyen bir beslenme ilişkisi kurmaktır. Çünkü sürdürülemeyen hiçbir beslenme planı uzun vadede sağlıklı sonuçlar doğurmaz.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Birçok kişi &quot;diyete başlama–bozma–yeniden başlama&quot; döngüsünü defalarca yaşar. Bu döngünün temel nedeni irade eksikliği değil; beslenme alışkanlıklarının gerçek hayata uyumlu olmamasıdır.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Sürdürülebilir Beslenme Nedir?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Sürdürülebilir beslenme alışkanlıkları; bireyin yaşam tarzına, psikolojik ihtiyaçlarına, biyolojik gereksinimlerine ve sosyal hayatına uyum sağlayabilen beslenme davranışlarıdır.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-2">Bu yaklaşımda:</p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+            <li>Yasaklar yerine denge vardır.</li>
+            <li>Mükemmeliyetçilik yerine esneklik vardır.</li>
+            <li>Kısa vadeli sonuçlar yerine uzun vadeli sağlık hedeflenir.</li>
+            <li>Beslenme bir ceza değil, öz-bakım aracı olarak görülür.</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Neden Çoğu Diyet Sürdürülemez?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Klasik diyetlerin büyük bir kısmı şu nedenlerle sürdürülemez hâle gelir:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+            <li>Aşırı kısıtlama</li>
+            <li>Tek tip beslenme planları</li>
+            <li>Sosyal yaşamdan kopma</li>
+            <li>Açlık–tokluk sinyallerini yok sayma</li>
+            <li>&quot;Bozdum, bitti&quot; düşüncesi</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed">
+            Bu faktörler zamanla hem fiziksel hem de psikolojik yorgunluğa yol açar. Sonuç ise genellikle kontrol kaybı, suçluluk ve eski alışkanlıklara geri dönüştür.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Sürdürülebilir Beslenmenin Temel İlkeleri</h2>
+          <div className="space-y-6">
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">1. Gerçekçi ve Esnek Olmak</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Sürdürülebilir beslenme, %100 mükemmel olmayı değil; çoğu zaman dengede kalabilmeyi hedefler. Özel günler, sosyal davetler ve yoğun dönemler planın bir parçasıdır.
+              </p>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">2. Açlık ve Tokluk Sinyallerini Dinlemek</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Bedeni sürekli bastırmak yerine, fizyolojik açlık ve tokluk sinyallerini tanımak; yeme davranışını doğal bir düzene sokar.
+              </p>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">3. Yiyecekleri Etiketlememek</h3>
+              <p className="text-gray-700 leading-relaxed">
+                &quot;İyi–kötü&quot;, &quot;yasak–serbest&quot; gibi etiketler, beslenme üzerindeki zihinsel baskıyı artırır. Sürdürülebilirlik, yiyeceklerle barışık bir ilişki kurmakla mümkündür.
+              </p>
+            </div>
+            <div className="pl-4 border-l-4 border-primary-500">
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">4. Beslenmeyi Öz-Bakım Olarak Görmek</h3>
+              <p className="text-gray-700 leading-relaxed">
+                Beslenme; kilo kontrolü aracı değil, enerji, zihinsel açıklık ve sağlık yatırımıdır. Bu bakış açısı, motivasyonu dışsal baskılardan içsel iyilik hâline taşır.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Psikoloji ve Sürdürülebilir Beslenme İlişkisi</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Beslenme davranışı yalnızca ne yediğimizle değil, neden yediğimizle ilgilidir. Stres, duygusal yük, beden algısı ve öz-değer; sürdürülebilirliği doğrudan etkiler.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Duygusal yeme davranışı fark edilmeden yapılan beslenme planları, uzun vadede başarısız olur. Bu nedenle sürdürülebilir beslenme yaklaşımı, psikolojik farkındalığı da içerir:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
+            <li>Duygusal tetikleyicileri tanımak</li>
+            <li>Stresle başa çıkma becerileri geliştirmek</li>
+            <li>Kendine şefkatli bir iç dil oluşturmak</li>
+          </ul>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Sürdürülebilir Beslenme ile Kilo Kontrolü Mümkün mü?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Evet. Ancak bu süreçte kilo kaybı birincil hedef değil, doğal bir sonuç olarak ele alınır. Beden, dengeli ve yeterli beslendiğinde; kan şekeri regülasyonu, hormonal denge ve yeme davranışı zamanla iyileşir.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Bu da kalıcı kilo kontrolünü destekler.
+          </p>
+        </section>
+
+        <section className="mb-8 bg-primary-50 p-8 rounded-2xl border border-primary-200">
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Sürdürülebilir beslenme alışkanlıkları, hızlı sonuç vaat etmez. Ancak kalıcı, gerçekçi ve sağlıklı değişimi mümkün kılar. Bu süreçte önemli olan mükemmel olmak değil; tekrar tekrar dengeye dönebilmektir.
+          </p>
+          <p className="text-gray-700 leading-relaxed font-semibold">
+            Beslenme yolculuğu bedenle kurulan uzun vadeli bir iş birliğidir.
+          </p>
+        </section>
+      </div>
+    ),
+  },
+  "beden-algisi": {
+    title: "Beden Algısı ve Yeme İlişkisi",
+    date: "5 Mart 2025",
+    category: "Psikoloji",
+    readingMinutes: 4,
+    content: (
+      <div className="prose prose-lg max-w-none">
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Beden Algısı Nedir?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Beden algısı, kişinin bedenini nasıl gördüğü, değerlendirdiği ve hissettiği ile ilgilidir. Bu algı, aynadaki gerçek görüntüden çok; düşünceler, duygular ve geçmiş deneyimlerle şekillenir.
+          </p>
+          <p className="text-gray-700 leading-relaxed">
+            Olumsuz beden algısı, kişinin bedenine karşı eleştirel ve memnuniyetsiz bir tutum geliştirmesine neden olabilir.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Beden Algısı Yeme Davranışını Nasıl Etkiler?</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Olumsuz beden algısı olan bireylerde sıklıkla şu döngü görülür:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+            <li>Katı diyet kuralları</li>
+            <li>Yasaklı besinler</li>
+            <li>Kontrol kaybı ve yeme atakları</li>
+            <li>Suçluluk ve pişmanlık</li>
+            <li>Diyete yeniden başlama</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed">
+            Bu döngü, yeme davranışının bedensel açlıktan çok bedenle ilgili duygular tarafından yönetilmesine yol açar.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Sağlıklı Beden Algısı, Sağlıklı Yeme İlişkisini Destekler</h2>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Bedenle barışık olmak:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4 mb-4">
+            <li>Açlık–tokluk sinyallerini fark etmeyi</li>
+            <li>Esnek ve sürdürülebilir beslenmeyi</li>
+            <li>Suçluluk duygusu olmadan yemek yemeyi</li>
+          </ul>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            kolaylaştırır. Amaç &quot;mükemmel beden&quot; değil, işlevsel ve saygılı bir beden algısı geliştirmektir.
+          </p>
+          <p className="text-gray-700 leading-relaxed mb-4">
+            Yeme davranışı yalnızca ne yediğimizle değil, bedenimize nasıl baktığımızla da doğrudan ilişkilidir.
+          </p>
+          <p className="text-gray-700 leading-relaxed font-semibold">
+            Beden algısını iyileştirmek, yeme davranışını düzenlemenin en güçlü ve kalıcı yollarından biridir.
+          </p>
+        </section>
+      </div>
+    ),
+  },
 };
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = blogPosts[params.slug];
+  if (!post) return { title: "Yazı bulunamadı" };
+  const description = `${post.title} — Elif Naz Öksüz | Diyetisyen & Psikolog blog yazısı.`;
+  return {
+    title: post.title,
+    description,
+    openGraph: {
+      title: post.title,
+      description,
+      type: "article",
+    },
+  };
+}
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
   const post = blogPosts[params.slug];
@@ -830,13 +1159,21 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 
         <article>
           <div className="mb-8">
-            <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">
-              <Calendar size={16} />
-              <span>{post.date}</span>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-gray-500 mb-4">
+              <span className="flex items-center gap-1">
+                <Calendar size={16} />
+                {post.date}
+              </span>
               <span className="text-primary-600 font-semibold flex items-center gap-1">
                 <Tag size={16} />
                 {post.category}
               </span>
+              {typeof post.readingMinutes === "number" && (
+                <span className="flex items-center gap-1">
+                  <Clock size={16} />
+                  {post.readingMinutes} dk okuma
+                </span>
+              )}
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {post.title}
@@ -847,7 +1184,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
             {post.content}
           </div>
 
-          <div className="mt-12 pt-8 border-t border-gray-200">
+          <div className="mt-8 py-6 border-t border-gray-200">
+            <BlogShareButtons title={post.title} slug={params.slug} />
+          </div>
+
+          <div className="mt-8 pt-6 border-t border-gray-200">
             <Link
               href="/randevu"
               className="inline-flex items-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-lg hover:shadow-xl"

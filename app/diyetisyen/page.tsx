@@ -1,20 +1,31 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle2, Clock, Globe, Heart, MessageCircle, Mail, Phone } from "lucide-react";
 
 export default function DietitianPage() {
   return (
     <div className="pt-20 min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Online Diyetisyen Danışmanlığı
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
             Diyetisyen & Psikolog Elif Naz Öksüz ile Online Diyet: Sağlıklı Yaşam Elinizin Altında!
           </p>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
             Yoğun temponuz, uzak mesafeniz ya da zaman kısıtlamalarınız sağlıklı beslenmenize engel olmasın. Size özel, bilimsel temellere dayalı ve size bir tık kadar yakın bir beslenme danışmanlığı alabilirsiniz.
           </p>
+          <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden bg-gray-100">
+            <Image
+              src="/images/diet.jpeg"
+              alt="Online Diyetisyen Danışmanlığı"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+              priority
+            />
+          </div>
         </div>
 
         {/* Online Diyet Programı Avantajları */}

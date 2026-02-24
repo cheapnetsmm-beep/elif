@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import FloatingButtons from "@/components/FloatingButtons";
 import StructuredData from "@/components/StructuredData";
+import CookieBanner from "@/components/CookieBanner";
 import dynamic from "next/dynamic";
 
 // Lazy load Google Analytics
@@ -92,6 +93,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* DNS Prefetch for external resources */}
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" crossOrigin="anonymous" />
@@ -106,6 +108,7 @@ export default function RootLayout({
         <Footer />
         <ScrollToTop />
         <FloatingButtons />
+        <CookieBanner />
       </body>
     </html>
   );

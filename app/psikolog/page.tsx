@@ -1,17 +1,28 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function PsychologistPage() {
   return (
     <div className="pt-20 min-h-screen bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Online Psikolog
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Psikolojik danışmanlık süreci; bireyin yaşadığı zorlanmaları anlamlandırmasına, düşünce ve duygu dünyasını daha yakından tanımasına ve günlük yaşamda daha işlevsel baş etme yolları geliştirmesine alan açan profesyonel bir destek sürecidir.
           </p>
+          <div className="relative w-full max-w-2xl mx-auto aspect-video rounded-2xl overflow-hidden bg-gray-100">
+            <Image
+              src="/images/online.jpeg"
+              alt="Online Psikolojik Danışmanlık"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 672px"
+              priority
+            />
+          </div>
         </div>
 
         <div className="space-y-12 mb-16">

@@ -13,9 +13,6 @@ const HowItWorks = dynamic(() => import("@/components/HowItWorks"), {
 const WhoIsItFor = dynamic(() => import("@/components/WhoIsItFor"), {
   loading: () => <div className="min-h-[400px]" />,
 });
-const ExpertiseAreas = dynamic(() => import("@/components/ExpertiseAreas"), {
-  loading: () => <div className="min-h-[400px]" />,
-});
 const FAQ = dynamic(() => import("@/components/FAQ"), {
   loading: () => <div className="min-h-[400px]" />,
 });
@@ -40,6 +37,12 @@ const BMICalculator = dynamic(() => import("@/components/BMICalculator"), {
 const SocialMedia = dynamic(() => import("@/components/SocialMedia"), {
   loading: () => <div className="min-h-[300px]" />,
 });
+const ContactSection = dynamic(() => import("@/components/ContactSection"), {
+  loading: () => <div className="min-h-[280px]" />,
+});
+const LatestBlogPosts = dynamic(() => import("@/components/LatestBlogPosts"), {
+  loading: () => <div className="min-h-[320px]" />,
+});
 
 export default function Home() {
   return (
@@ -48,15 +51,16 @@ export default function Home() {
       <WhyWorkTogether />
       <Services />
       <BMICalculator />
+      <LatestBlogPosts />
       <WhyTwoExpertise />
       <HowItWorks />
       <WhoIsItFor />
-      <ExpertiseAreas />
       <FAQ />
       <Testimonials />
       <WhyOnline />
       <TrustArea />
       <SocialMedia />
+      <ContactSection />
       <Newsletter />
       <CTA />
     </>

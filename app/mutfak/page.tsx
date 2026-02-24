@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function KitchenPage() {
   return (
     <div className="pt-20 min-h-screen bg-white">
@@ -22,7 +24,16 @@ export default function KitchenPage() {
 
         <div className="space-y-12">
           <article className="bg-white rounded-2xl shadow-soft p-8 border border-gray-100">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Yoğurtlu Yulaf & Chia Kâsesi</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Yoğurtlu Yulaf & Chia Kâsesi</h2>
+            <div className="relative w-full min-h-[280px] h-[380px] sm:h-[420px] rounded-xl overflow-hidden mb-6 bg-gray-50">
+              <Image
+                src="/but2.jpeg"
+                alt="Yoğurtlu Yulaf ve Chia Kâsesi"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
             <div className="mb-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Malzemeler:</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
@@ -48,7 +59,16 @@ export default function KitchenPage() {
           </article>
 
           <article className="bg-white rounded-2xl shadow-soft p-8 border border-gray-100">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Anti-Stres Topları</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Anti-Stres Topları</h2>
+            <div className="relative w-full min-h-[280px] h-[380px] sm:h-[420px] rounded-xl overflow-hidden mb-6 bg-gray-50">
+              <Image
+                src="/but1.jpeg"
+                alt="Anti-Stres Topları"
+                fill
+                className="object-contain"
+                sizes="(max-width: 768px) 100vw, 672px"
+              />
+            </div>
             <div className="mb-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Malzemeler: (Yaklaşık 6-8 adet için)</h3>
               <ul className="list-disc list-inside space-y-2 text-gray-700 ml-4">
