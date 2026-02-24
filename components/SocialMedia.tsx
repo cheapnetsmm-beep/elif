@@ -6,11 +6,11 @@ import { Instagram, Youtube, Twitter, Sparkles } from "lucide-react";
 const socialLinks = [
   {
     name: "Instagram",
-    url: "https://instagram.com/elifnazoksuz",
+    url: "https://www.instagram.com/dyt.psk.elifnazzoksuz",
     icon: Instagram,
     color: "from-[#E4405F] to-[#C13584]",
     hoverColor: "hover:from-[#E4405F] hover:to-[#C13584]",
-    label: "@elifnazoksuz",
+    label: "@dyt.psk.elifnazzoksuz",
   },
   {
     name: "YouTube",

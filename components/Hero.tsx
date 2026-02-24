@@ -205,7 +205,7 @@ export default function Hero() {
             {/* Image with Frame */}
             <div className="relative w-full h-full min-h-[600px] rounded-[2rem] overflow-hidden border-4 border-white/90 shadow-2xl">
               <Image
-                src="/cc.jpg"
+                src="/ana.jpg"
                 alt="Elif Naz Öksüz"
                 fill
                 className="object-cover"

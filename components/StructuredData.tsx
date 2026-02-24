@@ -10,7 +10,7 @@ export default function StructuredData() {
     "url": "https://elifnazoksuz.com",
     "image": "https://elifnazoksuz.com/images/elif-naz-oksuz.jpg",
     "sameAs": [
-      "https://instagram.com/elifnazoksuz",
+      "https://www.instagram.com/dyt.psk.elifnazzoksuz",
       "https://youtube.com/@elifnazoksuz",
       "https://twitter.com/elifnazoksuz"
     ],

@@ -30,7 +30,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com/elifnazoksuz"
+                href="https://www.instagram.com/dyt.psk.elifnazzoksuz"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl flex items-center justify-center hover:bg-gradient-to-br hover:from-[#E4405F] hover:to-[#C13584] transition-all duration-300 hover:scale-110 shadow-lg hover:shadow-[#E4405F]/50 border border-slate-700 hover:border-[#E4405F]"
@@ -113,6 +113,11 @@ export default function Footer() {
                   Randevu Al
                 </Link>
               </li>
+              <li>
+                <Link href="/gizlilik" className="text-gray-300 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block">
+                  Gizlilik Politikası
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -151,14 +156,17 @@ export default function Footer() {
               }}
             >
               <input
+                id="footer-newsletter-email"
                 type="email"
                 name="email"
                 placeholder="E-posta adresiniz"
                 required
+                aria-label="E-bülten için e-posta adresiniz"
                 className="px-4 py-2 rounded-lg bg-slate-800 border border-slate-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500"
               />
               <button
                 type="submit"
+                aria-label="E-bültene abone ol"
                 className="px-4 py-2 bg-primary-600 text-white rounded-lg font-semibold hover:bg-primary-700 transition-colors duration-200"
               >
                 Abone Ol

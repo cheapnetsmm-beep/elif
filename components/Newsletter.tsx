@@ -92,6 +92,7 @@ export default function Newsletter() {
                     placeholder="Adınız (Opsiyonel)"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    aria-label="Adınız (opsiyonel)"
                     className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
                   />
                 </div>
@@ -102,12 +103,14 @@ export default function Newsletter() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
+                    aria-label="E-posta adresiniz"
                     className="w-full px-4 py-3 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
                   />
                 </div>
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  aria-label="E-bültene abone ol"
                   className="px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 whitespace-nowrap"
                 >
                   {isSubmitting ? (
